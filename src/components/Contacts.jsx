@@ -5,8 +5,11 @@ import Logo from "../assets/logo.svg";
 export default function Contacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
+  // below is for CSS Only 
   const [currentSelected, setCurrentSelected] = useState(undefined);
+
   useEffect(()=>{
+    // Taking  current user from local storage 
     const setUser = async () => {
         const data = await JSON.parse(
           localStorage.getItem('chat-app-user')
@@ -16,7 +19,7 @@ export default function Contacts({ contacts, changeChat }) {
       }
       setUser();
   }, []);
-  
+
   const changeCurrentChat = (index, contact) => {
     setCurrentSelected(index);
     changeChat(contact);
@@ -27,8 +30,9 @@ export default function Contacts({ contacts, changeChat }) {
         <Container>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h3>snappy</h3>
+            <h3>Chat App</h3>
           </div>
+          {/* Rendering ContactS   see other users are coming */}
           <div className="contacts">
             {contacts.map((contact, index) => {
               return (
@@ -52,6 +56,7 @@ export default function Contacts({ contacts, changeChat }) {
               );
             })}
           </div>
+          {/* SHOWING CURRENT USER BELOW */}
           <div className="current-user">
             <div className="avatar">
               <img
