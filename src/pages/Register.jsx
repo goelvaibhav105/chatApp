@@ -38,7 +38,7 @@ function Register() {
       }
       if (data.status === true) {
         localStorage.setItem(
-          process.env.REACT_APP_LOCALHOST_KEY,
+          'chat-app-user',
           JSON.stringify(data.user)
         );
         navigate("/");
