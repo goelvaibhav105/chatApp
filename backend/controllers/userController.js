@@ -72,4 +72,19 @@ module.exports.setAvatar = async (req, res, next) => {
   }
 };
 
+module.exports.getAllUsers = async (req, res, next) => {
+  try {
+    // Here we are giving a queary such that it is looking all the users except _id not equals out user ID
+    const users = await User.find({ _id: { $ne: req.params.id } }).select([
+      "email",
+      "username",
+      "avatarImage",
+      "_id",
+    ]);
+    return res.json(users);
+  } catch (ex) {
+    next(ex);
+  }
+};
+
 
