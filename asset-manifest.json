@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/gh-pages/static/css/main.5bcf9fdb.css",
+    "main.js": "/gh-pages/static/js/main.6df78b75.js",
+    "static/media/robot.gif": "/gh-pages/static/media/robot.0617a41936621e9697cd.gif",
+    "static/media/loader.gif": "/gh-pages/static/media/loader.b40fc3d91ff1f4db53e2.gif",
+    "static/media/logo.svg": "/gh-pages/static/media/logo.9e60a2a8db74b95fbd24d95ca851cf57.svg",
+    "index.html": "/gh-pages/index.html",
+    "main.5bcf9fdb.css.map": "/gh-pages/static/css/main.5bcf9fdb.css.map",
+    "main.6df78b75.js.map": "/gh-pages/static/js/main.6df78b75.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bcf9fdb.css",
+    "static/js/main.6df78b75.js"
+  ]
+}
